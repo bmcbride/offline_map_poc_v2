@@ -56,8 +56,8 @@ function buildMap() {
 
 	lyr = new L.TileLayer.MBTiles('', {
 		maxZoom : 17,
-		scheme : 'tms'/*,
-		tms: true*/
+		scheme : 'tms',
+		tms: true
 	}, db);
 
 	mapquestOSM = L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png", {
