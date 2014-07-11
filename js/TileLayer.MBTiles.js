@@ -10,12 +10,8 @@ L.TileLayer.MBTiles = L.TileLayer.extend({
 	},
 	getTileUrl: function (tilePoint, zoom, tile) {
 		var z = this._getZoomForUrl();
-		/*var x = tilePoint.x;
-		var y = tilePoint.y;*/
-		var limit = this._getWrapTileNum();
-
 		var x = tilePoint.x;
-		var y = limit - tilePoint.y - 1;
+		var y = tilePoint.y;
 		var base64Prefix = 'data:image/gif;base64,';
 
 		this.mbTilesDB.transaction(function(tx) {
